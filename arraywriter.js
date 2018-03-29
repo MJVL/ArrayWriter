@@ -19,7 +19,6 @@ class ArrayWriter {
         this.writeArray('<p>','</p>')         
     }
     
-    
     /**
      * Writes the contents of _list to the document between the entered tags.
      * @param {String} startTag The desired start tag to write.
