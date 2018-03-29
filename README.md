@@ -58,12 +58,7 @@ Writes the contents of _list to the document between the entered tags.
 | endTag | <code>String</code> | The desired end tag to write. |
 
 ## Installation 
-```
-cd ~/
-git clone https://github.com/MJVL/ArrayWriter.git 
-cd <ArrayWriter>
-git status
-```
+`git clone https://github.com/MJVL/ArrayWriter.git `
 ## Usage
 ```JavaScript
 <script src="arraywriter.js"></script> 
