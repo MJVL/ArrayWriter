@@ -43,7 +43,7 @@ Setter
 <a name="ArrayWriter+writeArray"></a>
 
 ### ArrayWriter.writeArray()
-Writes the contents of _list to the document in a paragraph tag.
+Writes the contents of _list to the document in paragraph tags.
 
 **Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
 
