@@ -17,7 +17,7 @@ class ArrayWriter {
     /** Writes the contents of _list to the document in paragraph tags. */
     writeArray() {
         this._list.forEach(function(element) {
-            this.writeArray("<p>","</p>")
+            this.writeArray('<p>','</p>')
         });           
     }
     
