@@ -23,16 +23,15 @@ Creates an instance of ArrayPrinter.
 | --- | --- | --- |
 | list | <code>Array</code> | The desired array to fill the ArrayPrinter with. |
 
-<a name="ArrayWriter+list"></a>
 
-### arrayWriter.list ⇒ <code>Array</code>
+### ArrayWriter.list ⇒ <code>Array</code>
 Getter
 
 **Kind**: instance property of [<code>ArrayWriter</code>](#ArrayWriter)
 **Returns**: <code>Array</code> - The current array of this instance of ArrayWriter.
 
 
-### arrayWriter.list
+### ArrayWriter.list
 Setter
 
 **Kind**: instance property of [<code>ArrayWriter</code>](#ArrayWriter)
@@ -43,12 +42,12 @@ Setter
 
 <a name="ArrayWriter+writeArray"></a>
 
-### arrayWriter.writeArray()
+### ArrayWriter.writeArray()
 Writes the contents of _list to the document in a paragraph tag.
 
 **Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
 
-### arrayWriter.writeArray(startTag, endTag)
+### ArrayWriter.writeArray(startTag, endTag)
 Writes the contents of _list to the document between the entered tags.
 
 **Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
