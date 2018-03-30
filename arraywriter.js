@@ -47,6 +47,14 @@ class ArrayWriter {
     }
     
     /** 
+     * Writes the contents of _list to the document in paragraph tags that are assigned to the specified class.
+     * @param {String} eClass The desired class to assign to all elements.
+     */
+    writeArrayClassP(eClass) {
+        this.writeArray('<p class=' + eClass + '>','</p>')        
+    }
+    
+    /** 
      * Writes the contents of _list to the document in header tags at a specified level. 
      * @param {Number} headerLevel The desired header level to write (1-6).
      */
@@ -54,9 +62,26 @@ class ArrayWriter {
         this.writeArray('<h' + String(headerLevel) + '>','</h' + String(headerLevel) + '>')          
     }
     
+    /** 
+    * Writes the contents of _list to the document in header tags at a specified level that are assigned to the specified class.
+    * @param {Number} headerLevel The desired header level to write (1-6).
+    * @param {String} eClass The desired class to assign to all elements.
+    */
+    writeArrayClassH(headerLevel, eClass) {
+        this.writeArray('<h' + String(headerLevel) + ' class=' + eClass + '>','</h' + String(headerLevel) + '>')          
+    }
+    
     /** Writes the contents of _list to the document in divider tags. */
     writeArrayDiv() {
         this.writeArray('<div>','</div>')        
+    }
+    
+    /** 
+     * Writes the contents of _list to the document in divider tags that are assigned to the specified class.
+     * @param {String} eClass The desired class to assign to all elements.
+     */
+    writeArrayClassDiv(eClass) {
+        this.writeArray('<div class=' + eClass + '>','</div>')        
     }
     
     /** Writes the contents of _list to the document in span tags. */
@@ -64,9 +89,25 @@ class ArrayWriter {
         this.writeArray('<span>','</span>')        
     }
     
+    /** 
+    * Writes the contents of _list to the document in span tags that are assigned to the specified class.
+    * @param {String} eClass The desired class to assign to all elements.
+    */
+    writeArrayClassSpan(eClass) {
+        this.writeArray('<span class=' + eClass + '>','</span>')        
+    }
+    
     /** Writes the contents of _list to the document in list item tags. */
     writeArrayLI() {
         this.writeArray('<li>','</li>')        
+    }
+    
+    /** 
+    * Writes the contents of _list to the document in list item tags that are assigned to the specified class.
+    * @param {String} eClass The desired class to assign to all elements.
+    */
+    writeArrayClassLI(eClass) {
+        this.writeArray('<li class=' + eClass + '>','</li>')        
     }
     
     /**
