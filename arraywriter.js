@@ -1,5 +1,5 @@
 /**
- * Class that writes the contents of an array to a webpage.
+ * Class that writes the contents of an array to a webpage between specified tags.
  * @author Michael Van Leeuwen <michaeljvanleeuwen@gmail.com>
  */
 
