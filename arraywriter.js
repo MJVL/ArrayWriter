@@ -31,6 +31,25 @@ class ArrayWriter {
     }
     
     /**
+     * Writes the contents of _list to to the document between two sets of entered tags determined by the evaluation of the passed boolean function for each element.
+     * @param {String}   startTagTrue  The desired start tag to write if the condition is true for the element.
+     * @param {String}   endTagTrue    The desired end tag to write if the condition is true for the element.
+     * @param {String}   startTagFalse The desired start tag to write if the condition is false for the element.
+     * @param {String}   endTagFalse   The desired end tag to write if the condition is false for the element.
+     * @param {Function} boolFunction  The desired boolean function to be evaluated for each element.
+     */
+    writeArrayConditional(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction) {
+        this._list.forEach(function(element) {
+            if (boolFunction(element)) {
+                document.write(startTagTrue + element + endTagTrue);
+            }
+            else {
+                document.write(startTagFalse + element + endTagFalse);
+            }
+        }); 
+    }
+    
+    /**
      * Getter
      * @returns {Array} The current array of this instance of ArrayWriter.
      */
