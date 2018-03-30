@@ -188,9 +188,15 @@ Writes the contents of _list to to the document between two sets of entered tags
 | boolFunction | <code>function</code> | The desired boolean function to be evaluated for each element. |
 
 
-## Installation 
+## Cloning 
 `git clone https://github.com/MJVL/ArrayWriter.git `
 ## Usage
+No installation:
+```JavaScript
+<script src="https://rawgit.com/MJVL/ArrayWriter/master/arraywriter.js"></script> 
+```
+
+If cloned and in working directory:
 ```JavaScript
 <script src="arraywriter.js"></script> 
 ```
