@@ -14,9 +14,20 @@ class ArrayWriter {
         this._list = list;
     }
     
-    /** Writes the contents of _list to the document in paragraph tags. */
-    writeArray() {
-        this.writeArray('<p>','</p>')         
+    /**
+     * Getter
+     * @returns {Array} The current array of this instance of ArrayWriter.
+     */
+    get list() {
+        return this._list;
+    }
+    
+    /**
+     * Setter
+     * @param {Array} list The desired array to fill the ArrayPrinter with. 
+     */
+    set list(list) {
+        this._list = list;
     }
     
     /**
@@ -28,6 +39,49 @@ class ArrayWriter {
         this._list.forEach(function(element) {
             document.write(startTag + element + endTag);
         }); 
+    }
+    
+    /** Writes the contents of _list to the document in paragraph tags. */
+    writeArrayP() {
+        this.writeArray('<p>','</p>')        
+    }
+    
+    /** 
+     * Writes the contents of _list to the document in header tags at a specified level. 
+     * @param {Number} headerLevel The desired header level to write (1-6).
+     */
+    writeArrayH(headerLevel) {
+        this.writeArray('<h' + String(headerLevel) + '>','</h' + String(headerLevel) + '>')          
+    }
+    
+    /** Writes the contents of _list to the document in divider tags. */
+    writeArrayDiv() {
+        this.writeArray('<div>','</div>')        
+    }
+    
+    /** Writes the contents of _list to the document in span tags. */
+    writeArraySpan() {
+        this.writeArray('<span>','</span>')        
+    }
+    
+    /** Writes the contents of _list to the document in list item tags. */
+    writeArrayLI() {
+        this.writeArray('<li>','</li>')        
+    }
+    
+    /**
+     * Writes the contents of _list to the document between the entered tags in addition to adding an incrementing id based on the prefix.
+     * Removes last character of startTag under the assumption it's '>' in order to insert the id.
+     * @param {String} startTag The desired start tag to write.
+     * @param {String} endTag   The desired end tag to write.
+     * @param {String} prefix   The prefix for every element's id.
+     */
+    writeArrayIDs(startTag, endTag, prefix) {
+        let eNum = 0;
+        this._list.forEach(function(element) {
+            eNum++;
+            document.write(startTag.substring(0, startTag.length - 1) + ' id=' + prefix + String(eNum) + '>' + element + endTag);
+        });  
     }
     
     /**
@@ -47,22 +101,6 @@ class ArrayWriter {
                 document.write(startTagFalse + element + endTagFalse);
             }
         }); 
-    }
-    
-    /**
-     * Getter
-     * @returns {Array} The current array of this instance of ArrayWriter.
-     */
-    get list() {
-        return this._list;
-    }
-    
-    /**
-     * Setter
-     * @param {Array} list The desired array to fill the ArrayPrinter with. 
-     */
-    set list(list) {
-        this._list = list;
     }
     
 }
