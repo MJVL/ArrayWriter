@@ -14,8 +14,13 @@ Class that writes the contents of an array to a webpage.
     * [new ArrayWriter(list)](#new_ArrayWriter_new)
     * [.list](#ArrayWriter+list) ⇒ <code>Array</code>
     * [.list](#ArrayWriter+list)
-    * [.writeArray()](#ArrayWriter+writeArray)
     * [.writeArray(startTag, endTag)](#ArrayWriter+writeArray)
+    * [.writeArrayP()](#ArrayWriter+writeArrayP)
+    * [.writeArrayH(headerLevel)](#ArrayWriter+writeArrayH)
+    * [.writeArrayDiv()](#ArrayWriter+writeArrayDiv)
+    * [.writeArraySpan()](#ArrayWriter+writeArraySpan)
+    * [.writeArrayLI()](#ArrayWriter+writeArrayLI)
+    * [.writeArrayIDs(startTag, endTag, prefix)](#ArrayWriter+writeArrayIDs)
     * [.writeArrayConditional(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction)](#ArrayWriter+writeArrayConditional)
 
 <a name="new_ArrayWriter_new"></a>
@@ -48,12 +53,6 @@ Setter
 
 <a name="ArrayWriter+writeArray"></a>
 
-### arrayWriter.writeArray()
-Writes the contents of _list to the document in a paragraph tag.
-
-**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
-<a name="ArrayWriter+writeArray"></a>
-
 ### arrayWriter.writeArray(startTag, endTag)
 Writes the contents of _list to the document between the entered tags.
 
@@ -63,6 +62,54 @@ Writes the contents of _list to the document between the entered tags.
 | --- | --- | --- |
 | startTag | <code>String</code> | The desired start tag to write. |
 | endTag | <code>String</code> | The desired end tag to write. |
+
+<a name="ArrayWriter+writeArrayP"></a>
+
+### arrayWriter.writeArrayP()
+Writes the contents of _list to the document in paragraph tags.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+<a name="ArrayWriter+writeArrayH"></a>
+
+### arrayWriter.writeArrayH(headerLevel)
+Writes the contents of _list to the document in header tags at a specified level.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| headerLevel | <code>Number</code> | The desired header level to write (1-6). |
+
+<a name="ArrayWriter+writeArrayDiv"></a>
+
+### arrayWriter.writeArrayDiv()
+Writes the contents of _list to the document in divider tags.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+<a name="ArrayWriter+writeArraySpan"></a>
+
+### arrayWriter.writeArraySpan()
+Writes the contents of _list to the document in span tags.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+<a name="ArrayWriter+writeArrayLI"></a>
+
+### arrayWriter.writeArrayLI()
+Writes the contents of _list to the document in list item tags.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+<a name="ArrayWriter+writeArrayIDs"></a>
+
+### arrayWriter.writeArrayIDs(startTag, endTag, prefix)
+Removes last character of startTag under the assumption it's '>' in order to insert the id. an incrementing id based on the prefix.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| startTag | <code>String</code> | The desired start tag to write. |
+| endTag | <code>String</code> | The desired end tag to write. |
+| prefix | <code>String</code> | The prefix for every element's id. |
 
 <a name="ArrayWriter+writeArrayConditional"></a>
 
