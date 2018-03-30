@@ -162,7 +162,7 @@ Writes the contents of _list to the document in list item tags that are assigned
 <a name="ArrayWriter+writeArrayIDs"></a>
 
 ### arrayWriter.writeArrayIDs(startTag, endTag, prefix)
-Removes last character of startTag under the assumption it's '>' in order to insert the id. an incrementing id based on the prefix.
+Writes the contents of _list to the document between the entered tags in addition to adding an incrementing id based on the prefix. Removes last character of startTag under the assumption it's '>' in order to insert the id.
 
 **Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
 
