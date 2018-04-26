@@ -135,12 +135,7 @@ class ArrayWriter {
      */
     writeArrayConditional(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction) {
         this._list.forEach(function(element) {
-            if (boolFunction(element)) {
-                document.write(startTagTrue + element + endTagTrue);
-            }
-            else {
-                document.write(startTagFalse + element + endTagFalse);
-            }
+            document.write(boolFunction(element) ? startTagTrue + element + endTagTrue : startTagFalse + element + endTagFalse)
         }); 
     }
     
@@ -157,12 +152,7 @@ class ArrayWriter {
      */
     writeArrayConditionalModifiable(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction, modFuncTrue, modFuncFalse) {
         this._list.forEach(function(element) {
-            if (boolFunction(element)) {
-                document.write(startTagTrue + modFuncTrue(element) + endTagTrue);
-            }
-            else {
-                document.write(startTagFalse + modFuncFalse(element) + endTagFalse);
-            }
+            document.write(boolFunction(element) ? startTagTrue + modFuncTrue(element) + endTagTrue : startTagFalse + modFuncFalse(element) + endTagFalse);
         }); 
     }
     
