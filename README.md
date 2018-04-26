@@ -27,6 +27,7 @@ Class that writes the contents of an array to a webpage.
     * [.writeArrayClassLI(eClass)](#ArrayWriter+writeArrayClassLI)
     * [.writeArrayIDs(startTag, endTag, prefix)](#ArrayWriter+writeArrayIDs)
     * [.writeArrayConditional(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction)](#ArrayWriter+writeArrayConditional)
+    * [.writeArrayConditionalModifiable(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction, modFuncTrue, modFuncFalse)](#ArrayWriter+writeArrayConditionalModifiable)
 
 <a name="new_ArrayWriter_new"></a>
 
@@ -186,6 +187,23 @@ Writes the contents of _list to to the document between two sets of entered tags
 | startTagFalse | <code>String</code> | The desired start tag to write if the condition is false for the element. |
 | endTagFalse | <code>String</code> | The desired end tag to write if the condition is false for the element. |
 | boolFunction | <code>function</code> | The desired boolean function to be evaluated for each element. |
+
+<a name="ArrayWriter+writeArrayConditionalModifiable"></a>
+
+### arrayWriter.writeArrayConditionalModifiable(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction, modFuncTrue, modFuncFalse)
+Writes the contents of _list to to the document between two sets of entered tags determined by the evaluation of the pasModifies element based on the passed mod functions depending on the condition result for the element.
+
+**Kind**: instance method of [<code>ArrayWriter</code>](#ArrayWriter)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| startTagTrue | <code>String</code> | The desired start tag to write if the condition is true for the element. |
+| endTagTrue | <code>String</code> | The desired end tag to write if the condition is true for the element. |
+| startTagFalse | <code>String</code> | The desired start tag to write if the condition is false for the element. |
+| endTagFalse | <code>String</code> | The desired end tag to write if the condition is false for the element. |
+| boolFunction | <code>function</code> | The desired boolean function to be evaluated for each element. |
+| modFuncTrue | <code>function</code> | The desired function to modify element if the condition is true for the element. |
+| modFuncFalse | <code>function</code> | The desired function to modify element if the condition is false for the element. |
 
 
 ## Cloning 
