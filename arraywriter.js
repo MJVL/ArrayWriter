@@ -144,4 +144,26 @@ class ArrayWriter {
         }); 
     }
     
+     /**
+     * Writes the contents of _list to to the document between two sets of entered tags determined by the evaluation of the passed boolean function for each element.
+     * Modifies element based on the passed mod functions depending on the condition result for the element.
+     * @param {String}   startTagTrue  The desired start tag to write if the condition is true for the element.
+     * @param {String}   endTagTrue    The desired end tag to write if the condition is true for the element.
+     * @param {String}   startTagFalse The desired start tag to write if the condition is false for the element.
+     * @param {String}   endTagFalse   The desired end tag to write if the condition is false for the element.
+     * @param {Function} boolFunction  The desired boolean function to be evaluated for each element.
+     * @param {Function} modFuncTrue   The desired function to modify element if the condition is true for the element.
+     * @param {Function} modFuncFalse  The desired function to modify element if the condition is false for the element.
+     */
+    writeArrayConditionalModifiable(startTagTrue, endTagTrue, startTagFalse, endTagFalse, boolFunction, modFuncTrue, modFuncFalse) {
+        this._list.forEach(function(element) {
+            if (boolFunction(element)) {
+                document.write(startTagTrue + modFuncTrue(element) + endTagTrue);
+            }
+            else {
+                document.write(startTagFalse + modFuncFalse(element) + endTagFalse);
+            }
+        }); 
+    }
+    
 }
