@@ -206,8 +206,6 @@ Writes the contents of _list to to the document between two sets of entered tags
 | modFuncFalse | <code>function</code> | The desired function to modify element if the condition is false for the element. |
 
 
-## Cloning 
-`git clone https://github.com/MJVL/ArrayWriter.git `
 ## Usage
 ```JavaScript
 <script src="https://rawgit.com/MJVL/ArrayWriter/master/arraywriter.js"></script> 
