@@ -1,5 +1,7 @@
 # ArrayWriter
 Simple JavaScript class that writes the contents of an array to a webpage between specified tags.
+
+This project was made to learn basic JavaScript and documentation practices. I would recommend using JQuery rather than base JavaScript.
 ## Documentation
 
 <a name="ArrayWriter"></a>
